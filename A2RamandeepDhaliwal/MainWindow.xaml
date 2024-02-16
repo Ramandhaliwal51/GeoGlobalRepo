@@ -1,0 +1,32 @@
+﻿<Window x:Class="A2RamandeepDhaliwal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A2RamandeepDhaliwal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="461" Width="696">
+    <Grid Margin="0,0,10,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="229*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="551*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Continents" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="32" Width="138"/>
+        <Label Content="Countries" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="32" Width="138"/>
+        <Label Content="Cities" HorizontalAlignment="Left" Margin="129,27,0,0" VerticalAlignment="Top" Height="32" Width="138" Grid.Column="2"/>
+        <Label Content="Currency:" HorizontalAlignment="Left" Margin="10,335,0,0" VerticalAlignment="Top" Height="32" Width="69"/>
+        <Label Content="Language:" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Height="28" Width="69"/>
+        <ComboBox x:Name="comboContinents" HorizontalAlignment="Left" Margin="115,15,0,0" VerticalAlignment="Top" Width="146" Height="30" Grid.ColumnSpan="3" SelectionChanged="comboContinents_SelectionChanged" />
+        <ListBox x:Name="listBoxCountries" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="10,82,425,175" Width="NaN" SelectionChanged="listBoxCountries_SelectionChanged" Grid.ColumnSpan="3"/>
+        <Button x:Name="AddContinentsBtn" Content="Add Continents" HorizontalAlignment="Left" Margin="63,373,0,0" VerticalAlignment="Top" Height="34" Width="123" Click="AddContinentsBtn_Click"/>
+        <Button x:Name="addCountryBtn" Content="Add Country" HorizontalAlignment="Left" Margin="28,373,0,0" VerticalAlignment="Top" Height="34" Width="123" Grid.Column="2" Click="addCountryBtn_Click"/>
+        <Button x:Name="addCityBtn" Content="Add Cities" HorizontalAlignment="Left" Margin="220,373,0,0" VerticalAlignment="Top" Height="34" Width="123" Grid.Column="2" Click="addCityBtn_Click"/>
+        <Label x:Name="languageLabel" Content="" HorizontalAlignment="Left" Margin="79,281,0,0" VerticalAlignment="Top" Height="33" Width="147" IsEnabled="False"/>
+        <Label x:Name="currencyLabel" Content="" HorizontalAlignment="Left" Margin="79,333,0,0" VerticalAlignment="Top" Height="33" Width="147" IsEnabled="False"/>
+        <DataGrid x:Name="cityDataGrid" Grid.Column="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="129,64,30,133" IsEnabled="False" >
+
+        </DataGrid>
+
+    </Grid>
+</Window>

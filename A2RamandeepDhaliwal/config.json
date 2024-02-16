@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "WorldDBLocal": "Server=\\(LocalDB)\\MSSQLLocalDB;Database=WorldDB;Trusted_Connection=Yes;"
+  }
+}
